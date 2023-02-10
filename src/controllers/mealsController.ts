@@ -1,12 +1,13 @@
 'use strict';
 
-import { Request, Response } from "express";
-import * as mealsService from "../services/mealsService";
-import MealType from "../types/MealType";
+import { Request, Response } from 'express';
+import * as mealsService from '../services/mealsService.js';
+import MealType from '../types/MealType.js';
 
 export const get = async(req: Request, res: Response) => {
   const meals = await mealsService.getAll();
 
+  console.log(meals);
 
   res.send(meals);
 };

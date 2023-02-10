@@ -1,15 +1,17 @@
 'use strict';
 
-import { Sequelize } from "sequelize";
+import { Sequelize } from 'sequelize';
+import pg from 'pg';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 const { DB_DATABASE, DB_PASSWORD, DB_USER, DB_HOST } = process.env;
 
-const sequelize = new Sequelize(DB_DATABASE || '', DB_USER || '', DB_PASSWORD, {
+export const sequelize = new Sequelize(DB_DATABASE || '', DB_USER || '', DB_PASSWORD, {
   host: DB_HOST,
   dialect: 'postgres',
+  dialectModule: pg,
 });
 
 // TEST CONNECTION 

@@ -1,9 +1,8 @@
 'use strict';
-import { DataTypes } from "sequelize";
-import { Sequelize } from 'sequelize';
-import MealType from "../types/MealType";
 
-const sequelize = new Sequelize();
+import { DataTypes } from 'sequelize';
+import MealType from '../types/MealType.js';
+import { sequelize } from '../utils/db.js';
 
 export const Meal= sequelize.define<MealType>('Meal', {
   idMeal: {

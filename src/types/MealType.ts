@@ -1,4 +1,4 @@
-import { InferAttributes, InferCreationAttributes, Model } from "sequelize";
+import { InferAttributes, InferCreationAttributes, Model } from 'sequelize';
 
 export default interface MealType extends Model<InferAttributes<MealType>, InferCreationAttributes<MealType>> {
   idMeal: number,

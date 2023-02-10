@@ -1,7 +1,7 @@
 'use strict';
 
 import express from 'express';
-import * as mealsController from '../controllers/mealsController';
+import * as mealsController from '../controllers/mealsController.js';
 
 export const mealsRoute = express.Router();
 

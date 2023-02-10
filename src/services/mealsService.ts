@@ -1,7 +1,7 @@
 'use strict';
 
-import { Meal } from "../models/mealsModels";
-import MealType from '../types/MealType';
+import { Meal } from '../models/mealsModels.js';
+import MealType from '../types/MealType.js';
 
 export async function getAll() {
   try {
